@@ -7,8 +7,9 @@
 //
 
 #import "ERViewController.h"
+#import "ERActionSheet.h"
 
-@interface ERViewController ()
+@interface ERViewController () <ERActionSheetDelegate>
 
 @end
 
@@ -17,13 +18,67 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)handleButton1:(id)sender
+{
+    ERActionSheet *actionSheet = [[ERActionSheet alloc] initWithDelegate:self];
+    [actionSheet addButtonWithTitle:@"Button 0" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet showInView:self.view];
+}
+
+- (IBAction)handleButton2:(id)sender
+{
+    ERActionSheet *actionSheet = [[ERActionSheet alloc] initWithDelegate:self];
+    [actionSheet addButtonWithTitle:@"Button 0" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 1" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 2" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 3" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 4" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 5" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 6" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 7" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet showInView:self.view];
+}
+
+- (IBAction)handleButton3:(id)sender
+{
+    ERActionSheet *actionSheet = [[ERActionSheet alloc] initWithDelegate:self];
+    [actionSheet addButtonWithTitle:@"Button 0" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 1" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 2" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 3" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 4" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 5" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 6" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 7" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 8" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 9" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 10" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 11" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 12" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 13" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 14" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet showInView:self.view];
+}
+
+- (IBAction)handleButton4:(id)sender
+{
+    ERActionSheet *actionSheet = [[ERActionSheet alloc] initWithDelegate:self];
+    [actionSheet showInView:self.view];
+}
+
+
+#pragma mark delegate
+
+- (void)ERActionSheet:(ERActionSheet *)sheet clickedButtonAtIndex:(NSInteger)index
+{
+    NSLog(@"##### Click On Button %d !", index);
 }
 
 @end

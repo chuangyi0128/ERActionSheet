@@ -1,0 +1,14 @@
+PODS:
+  - ERActionSheet (1.0.0)
+
+DEPENDENCIES:
+  - ERActionSheet (from `../`)
+
+EXTERNAL SOURCES:
+  ERActionSheet:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ERActionSheet: e6a138b52b161f645a5562e70fac5d7b670f297f
+
+COCOAPODS: 0.34.4
