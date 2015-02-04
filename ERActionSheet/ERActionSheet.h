@@ -12,7 +12,7 @@
 @protocol ERActionSheetDelegate <NSObject>
 
 @optional
-- (void)ERActionSheet:(ERActionSheet*)sheet clickedButtonAtIndex:(NSInteger)index;
+- (void)ERActionSheet:(ERActionSheet*)sheet clickedButtonAtIndex:(NSInteger)index withInfo:(NSDictionary *)info;
 - (void)ERActionSheetCancel;
 
 @end
@@ -23,7 +23,7 @@
 }
 
 - (id)initWithDelegate:(id<ERActionSheetDelegate>)delegate;
-- (void)addButtonWithTitle:(NSString*)title Image:(UIImage*)image;
+- (void)addButtonWithTitle:(NSString*)title image:(UIImage*)image info:(NSDictionary *)info;
 - (void)showInView:(UIView*)view;
 
 @property (strong, nonatomic) UIPageControl *pageController;

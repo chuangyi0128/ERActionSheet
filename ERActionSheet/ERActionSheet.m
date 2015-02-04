@@ -14,6 +14,7 @@
 @property (weak, nonatomic) UIView *superView;
 @property (assign, nonatomic) CGSize cellSize;
 @property (strong, nonatomic) UIView *backView;
+@property (strong, nonatomic) NSMutableArray *infoArray;
 @end
 
 #define CancelButtonLeft        20
@@ -35,6 +36,7 @@
         [self setAutoresizesSubviews:NO];
         
         self.cellArray = [[NSMutableArray alloc] init];
+        self.infoArray = [NSMutableArray array];
         self.backView = [[UIView alloc] init];
         [self.backView setBackgroundColor:[UIColor clearColor]];
         [self.backView setAlpha:0.0f];
@@ -123,8 +125,8 @@
     [self.scrollView setContentSize:CGSizeMake(scrolViewSize.width*pagesCount, scrolViewSize.height)];
     self.scrollView.scrollEnabled = (pagesCount > 1);
     
-    for (ERActionSheetCell *cell in self.cellArray) {
-        NSInteger index = [self.cellArray indexOfObject:cell];
+    for (int index = 0; index < self.cellArray.count; index++) {
+        ERActionSheetCell *cell = self.cellArray[index];
         NSInteger row = index / columnsCount % rowsPerPage;
         NSInteger column = index % columnsCount;
         NSInteger page = index / columnsCount / rowsPerPage;
@@ -140,8 +142,11 @@
 #pragma mark - ERActionSheetCellDelegate
 - (void)didClickCell:(id)sender
 {
-    if ([self.delegate respondsToSelector:@selector(ERActionSheet:clickedButtonAtIndex:)]) {
-        [self.delegate ERActionSheet:self clickedButtonAtIndex:[self.cellArray indexOfObject:sender]];
+    if ([self.delegate respondsToSelector:@selector(ERActionSheet:clickedButtonAtIndex:withInfo:)]) {
+        NSUInteger index = [self.cellArray indexOfObject:sender];
+        if (index != NSNotFound) {
+            [self.delegate ERActionSheet:self clickedButtonAtIndex:index withInfo:self.infoArray[index]];
+        }
         [self handleCancel:nil];
     }
 }
@@ -157,13 +162,18 @@
 
 #pragma mark - Public Methods
 
-- (void)addButtonWithTitle:(NSString*)title Image:(UIImage*)image
+- (void)addButtonWithTitle:(NSString*)title image:(UIImage*)image info:(NSDictionary *)info
 {
     ERActionSheetCell *cell = [[ERActionSheetCell alloc] initWithDelegate:self];
     [cell setImage:image];
     [cell setTitle:title];
     [self.cellArray addObject:cell];
     self.cellSize = cell.frame.size;
+
+    if (info == nil) {
+        info = [NSDictionary dictionary];
+    }
+    [self.infoArray addObject:info];
 }
 
 - (void)showInView:(UIView*)superView
