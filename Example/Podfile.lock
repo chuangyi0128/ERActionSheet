@@ -1,5 +1,5 @@
 PODS:
-  - ERActionSheet (1.0.0)
+  - ERActionSheet (1.0.2)
 
 DEPENDENCIES:
   - ERActionSheet (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ERActionSheet: e6a138b52b161f645a5562e70fac5d7b670f297f
+  ERActionSheet: f51bc7d750c3cf1ebc0d897130acc3f50115a874
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.36.0

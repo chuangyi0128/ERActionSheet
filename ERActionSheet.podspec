@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ERActionSheet"
-  s.version          = "1.0.2"
+  s.version          = "1.0.3"
   s.summary          = "Collection ActionSheet"
   s.description      = "A Simple Collection ActionSheet"
   s.homepage         = "https://github.com/chuangyi0128/ERActionSheet"
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '5.0'
   s.requires_arc = true
-
   s.source_files = 'ERActionSheet/*'
+
 end

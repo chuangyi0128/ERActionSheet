@@ -1,5 +1,6 @@
 #include "Pods-Tests-ERActionSheet.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/ERActionSheet" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ERActionSheet"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ERActionSheet" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ERActionSheet"
 OTHER_LDFLAGS = -ObjC
 PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

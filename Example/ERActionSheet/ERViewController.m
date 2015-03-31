@@ -18,6 +18,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    bgView.image = [UIImage imageNamed:@"testBG"];
+    [self.view insertSubview:bgView atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,42 +32,40 @@
 - (IBAction)handleButton1:(id)sender
 {
     ERActionSheet *actionSheet = [[ERActionSheet alloc] initWithDelegate:self];
-    [actionSheet addButtonWithTitle:@"Button 0" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
     [actionSheet showInView:self.view];
 }
 
 - (IBAction)handleButton2:(id)sender
 {
     ERActionSheet *actionSheet = [[ERActionSheet alloc] initWithDelegate:self];
-    [actionSheet addButtonWithTitle:@"Button 0" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 1" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 2" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 3" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 4" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 5" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 6" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 7" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
     [actionSheet showInView:self.view];
 }
 
 - (IBAction)handleButton3:(id)sender
 {
     ERActionSheet *actionSheet = [[ERActionSheet alloc] initWithDelegate:self];
-    [actionSheet addButtonWithTitle:@"Button 0" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 1" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 2" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 3" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 4" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 5" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 6" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 7" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 8" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 9" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 10" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 11" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 12" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 13" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
-    [actionSheet addButtonWithTitle:@"Button 14" Image:[UIImage imageNamed:@"buttonImage1.jpg"]];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"微信朋友圈" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
+    [actionSheet addButtonWithTitle:@"Button 0" image:[UIImage imageNamed:@"buttonImage1.jpg"] info:nil];
     [actionSheet showInView:self.view];
 }
 
